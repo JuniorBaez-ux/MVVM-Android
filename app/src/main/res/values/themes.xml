@@ -18,8 +18,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="Theme.MVVMExample" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
 
     <style name="Theme.AndoidMVVM.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.AndoidMVVM.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
