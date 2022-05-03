@@ -1,18 +1,11 @@
-package com.example.andoidmvvm
+package ui.view
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.andoidmvvm.databinding.ActivityMainBinding
-import viewmodel.QuoteViewModel
+import ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
 
