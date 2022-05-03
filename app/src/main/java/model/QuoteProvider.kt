@@ -43,9 +43,11 @@ class QuoteProvider {
                 quote = "Software and cathedrals are much the same — first we build them, then we pray.",
                 author = "Anonymous"
             ),
-            QuoteModel(quote = "¿A que esperas?, suscríbete.", author = "AristiDevs"),
-            QuoteModel(quote = "Los erizos son los mejores animales del mundo", author = "Junior Baez")
-
+            QuoteModel(
+                quote = "Los erizos son los mejores animales del mundo.",
+                author = "Junior Baez"
+            ),
+            QuoteModel(quote = "¿A que esperas?, suscríbete.", author = "AristiDevs")
         )
     }
 }
