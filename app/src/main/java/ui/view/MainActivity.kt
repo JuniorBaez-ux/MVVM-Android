@@ -3,6 +3,7 @@ package ui.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.viewModels
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.example.andoidmvvm.databinding.ActivityMainBinding
 import ui.viewmodel.QuoteViewModel
@@ -18,11 +19,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        quoteViewModel.onCreate()
+
         quoteViewModel.quoteModel.observe(this, Observer {
             binding.tvQuote.text = it.quote
             binding.tvAuthor.text = it.author
         })
-
+        quoteViewModel.isLoading.observe(this, Observer {
+            binding.loading.isVisible = it
+        })
 
         binding.viewContainer.setOnClickListener { quoteViewModel.randomQuote() }
 
