@@ -1,13 +1,14 @@
 package domain
 
+import data.QuoteRepository
+import domain.model.Quote
 import model.QuoteModel
-import model.QuoteProvider
 import javax.inject.Inject
 
-class GetRandomQuoteUseCase @Inject constructor(private val quoteProvider: QuoteProvider) {
+class GetRandomQuoteUseCase @Inject constructor(private val repository: QuoteRepository) {
 
-    operator fun invoke():QuoteModel?{
-        val quotes = quoteProvider.quotes
+    suspend operator fun invoke():Quote?{
+        val quotes = repository.getAllQuotesFromDatabase()
         if(!quotes.isNullOrEmpty()){
             val randomNumber = (quotes.indices).random()
             return quotes[randomNumber]
